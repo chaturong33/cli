@@ -1,132 +1,132 @@
-# GitHub CLI
-
+#5 GitHub CLI
+ตาตี่
 `gh` is GitHub on the command line. It brings pull requests, issues, and other GitHub concepts to the terminal next to where you are already working with `git` and your code.
-
+to5
 ![screenshot of gh pr status](https://user-images.githubusercontent.com/98482/84171218-327e7a80-aa40-11ea-8cd1-5177fc2d0e72.png)
-
+non
 GitHub CLI is supported for users on GitHub.com, GitHub Enterprise Cloud, and GitHub Enterprise Server 2.20+ with support for macOS, Windows, and Linux.
-
+no.2
 ## Documentation
-
+no.5
 For [installation options see below](#installation), for usage instructions [see the manual][manual].
-
+2.3
 ## Contributing
 
 If anything feels off, or if you feel that some functionality is missing, please check out the [contributing page][contributing]. There you will find instructions for sharing your feedback, building the tool locally, and submitting pull requests to the project.
-
+38
 If you are a hubber and are interested in shipping new commands for the CLI, check out our [doc on internal contributions][intake-doc].
-
+2
 <!-- this anchor is linked to from elsewhere, so avoid renaming it -->
 ## Installation
-
+152
 ### macOS
-
+2
 `gh` is available via [Homebrew][], [MacPorts][], [Conda][], [Spack][], [Webi][], and as a downloadable binary including Mac OS installer `.pkg` from the [releases page][].
-
+24
 > [!NOTE]
 > As of May 29th, Mac OS installer `.pkg` are unsigned with efforts prioritized in [`cli/cli#9139`](https://github.com/cli/cli/issues/9139) to support signing them.
-
+!
 #### Homebrew
-
+30
 | Install:          | Upgrade:          |
 | ----------------- | ----------------- |
 | `brew install gh` | `brew upgrade gh` |
-
+505
 #### MacPorts
-
+1
 | Install:               | Upgrade:                                       |
 | ---------------------- | ---------------------------------------------- |
 | `sudo port install gh` | `sudo port selfupdate && sudo port upgrade gh` |
-
+2
 #### Conda
-
+2
 | Install:                                 | Upgrade:                                |
 |------------------------------------------|-----------------------------------------|
 | `conda install gh --channel conda-forge` | `conda update gh --channel conda-forge` |
-
+3
 Additional Conda installation options available on the [gh-feedstock page](https://github.com/conda-forge/gh-feedstock#installing-gh).
-
+101
 #### Spack
-
+0
 | Install:           | Upgrade:                                 |
 | ------------------ | ---------------------------------------- |
 | `spack install gh` | `spack uninstall gh && spack install gh` |
-
+4
 #### Webi
-
+555
 | Install:                            | Upgrade:         |
 | ----------------------------------- | ---------------- |
 | `curl -sS https://webi.sh/gh \| sh` | `webi gh@stable` |
-
+1
 For more information about the Webi installer see [its homepage](https://webinstall.dev/).
-
+2
 #### Flox
-
+4
 | Install:          | Upgrade:                |
 | ----------------- | ----------------------- |
 | `flox install gh` | `flox upgrade toplevel` |
-
+1
 For more information about Flox, see [its homepage](https://flox.dev)
-
+1
 ### Linux & BSD
-
+3
 `gh` is available via:
 - [our Debian and RPM repositories](./docs/install_linux.md);
 - community-maintained repositories in various Linux distros;
 - OS-agnostic package managers such as [Homebrew](#homebrew), [Conda](#conda), [Spack](#spack), [Webi](#webi); and
 - our [releases page][] as precompiled binaries.
-
+1
 For more information, see [Linux & BSD installation](./docs/install_linux.md).
-
+5
 ### Windows
-
+6
 `gh` is available via [WinGet][], [scoop][], [Chocolatey][], [Conda](#conda), [Webi](#webi), and as downloadable MSI.
-
+5
 #### WinGet
-
+2
 | Install:            | Upgrade:            |
 | ------------------- | --------------------|
 | `winget install --id GitHub.cli` | `winget upgrade --id GitHub.cli` |
-
+1
 > [!NOTE]
 > The Windows installer modifies your PATH. When using Windows Terminal, you will need to **open a new window** for the changes to take effect. (Simply opening a new tab will _not_ be sufficient.)
-
+0
 #### scoop
-
+5
 | Install:           | Upgrade:           |
 | ------------------ | ------------------ |
 | `scoop install gh` | `scoop update gh`  |
-
+1
 #### Chocolatey
-
+5
 | Install:           | Upgrade:           |
 | ------------------ | ------------------ |
 | `choco install gh` | `choco upgrade gh` |
-
+7
 #### Signed MSI
-
+5
 MSI installers are available for download on the [releases page][].
-
+10
 ### Codespaces
-
+22
 To add GitHub CLI to your codespace, add the following to your [devcontainer file](https://docs.github.com/en/codespaces/setting-up-your-project-for-codespaces/adding-features-to-a-devcontainer-file):
-
+21
 ```json
 "features": {
   "ghcr.io/devcontainers/features/github-cli:1": {}
 }
-```
-
+```Y21
+127
 ### GitHub Actions
-
+2
 GitHub CLI comes pre-installed in all [GitHub-Hosted Runners](https://docs.github.com/en/actions/using-github-hosted-runners/about-github-hosted-runners).
-
+Y21
 ### Other platforms
-
+123
 Download packaged binaries from the [releases page][].
-
+04
 #### Verification of binaries
-
+50
 Since version 2.50.0 `gh` has been producing [Build Provenance Attestation](https://github.blog/changelog/2024-06-25-artifact-attestations-is-generally-available/) enabling a cryptographically verifiable paper-trail back to the origin GitHub repository, git revision and build instructions used. The build provenance attestations are signed and relies on Public Good [Sigstore](https://www.sigstore.dev/) for PKI.
 
 There are two common ways to verify a downloaded release, depending if `gh` is aready installed or not. If `gh` is installed, it's trivial to verify a new release:
